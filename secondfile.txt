@@ -1,1 +1,84 @@
 This is my second file that i will push on the server.
+
+To branch out folders.
+
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching
+$ mkdir org_details
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching
+$ cd org_details/
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details
+$ git init
+Initialized empty Git repository in C:/Users/Kakashi/branching/org_details/.git/
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ notepad name.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ notepad employee.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git add .
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git commit -m "first commit"
+[master (root-commit) b049082] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 employee.txt
+ create mode 100644 name.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git log --pretty=oneline
+b049082e88c9b99c77a6442e4ba279139dba18d2 (HEAD -> master) first commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git branch branchhh
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git branch -v
+  branchhh b049082 first commit
+* master   b049082 first commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ ls
+employee.txt  name.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ git checkout branchhh
+Switched to branch 'branchhh'
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ notepad address.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ notepad salary.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ git add .
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ git commit -m "this is second commit"
+[branchhh 7ad01c5] this is second commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 address.txt
+ create mode 100644 salary.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ git init
+Reinitialized existing Git repository in C:/Users/Kakashi/branching/org_details/.git/
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ git checkout org_details
+error: pathspec 'org_details' did not match any file(s) known to git
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (branchhh)
+$ git checkout master
+Switched to branch 'master'
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$ ^C
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/branching/org_details (master)
+$
