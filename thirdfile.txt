@@ -1,1 +1,231 @@
 This is the remaining third file of the text file category
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=oneline
+93c63bfcc866c333538127e9c4d46174e6d810d9 (HEAD -> main, origin/main, origin/HEAD) This is my first commit for second repo
+8dd46e7a60865d2317e05df357d2920bc100052d Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ ^C
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git reset --soft 8dd46e7a60865d2317e05df357d2920bc100052d
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=oneline
+8dd46e7a60865d2317e05df357d2920bc100052d (HEAD -> main) Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   secondfile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   secondfile.txt
+
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ touch thirdfile.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/Kakashi/gittt/secondrepo/.git/
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git commit -m "This is the third commit of this repo"
+[main decd432] This is the third commit of this repo
+ 1 file changed, 1 insertion(+)
+ create mode 100644 secondfile.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git add .
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   secondfile.txt
+        new file:   thirdfile.txt
+
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log
+commit decd43294125678310ef253db1c6bc861814efd2 (HEAD -> main)
+Author: kakashii <aniketshinde8452@gmail.com>
+Date:   Wed Sep 28 00:30:24 2022 +0530
+
+    This is the third commit of this repo
+
+commit 8dd46e7a60865d2317e05df357d2920bc100052d
+Author: Aniket Shinde <86598930+Kakashi0610@users.noreply.github.com>
+Date:   Tue Sep 27 20:22:52 2022 +0530
+
+    Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=oneline
+decd43294125678310ef253db1c6bc861814efd2 (HEAD -> main) This is the third commit of this repo
+8dd46e7a60865d2317e05df357d2920bc100052d Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git commit -m "Adding of the forth commit"
+[main f609ee6] Adding of the forth commit
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 thirdfile.txt
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git commit -m "Adding of the fifth commit"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 2 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log
+commit f609ee654c64fd0306c6a79f3fe7c26ac3f5a280 (HEAD -> main)
+Author: kakashii <aniketshinde8452@gmail.com>
+Date:   Wed Sep 28 00:32:10 2022 +0530
+
+    Adding of the forth commit
+
+commit decd43294125678310ef253db1c6bc861814efd2
+Author: kakashii <aniketshinde8452@gmail.com>
+Date:   Wed Sep 28 00:30:24 2022 +0530
+
+    This is the third commit of this repo
+
+commit 8dd46e7a60865d2317e05df357d2920bc100052d
+Author: Aniket Shinde <86598930+Kakashi0610@users.noreply.github.com>
+Date:   Tue Sep 27 20:22:52 2022 +0530
+
+    Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty= online
+fatal: ambiguous argument 'online': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=online
+fatal: invalid --pretty format: online
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=oneline
+f609ee654c64fd0306c6a79f3fe7c26ac3f5a280 (HEAD -> main) Adding of the forth commit
+decd43294125678310ef253db1c6bc861814efd2 This is the third commit of this repo
+8dd46e7a60865d2317e05df357d2920bc100052d Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git reset --soft 8dd46e7a60865d2317e05df357d2920bc100052d
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   secondfile.txt
+        new file:   thirdfile.txt
+
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git pull commit -m "Adding of the fifth commit"
+error: unknown switch `m'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    --recurse-submodules[=<on-demand>]
+                          control for recursive fetching of submodules
+
+Options related to merging
+    -r, --rebase[=(false|true|merges|interactive)]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --signoff[=...]       add a Signed-off-by trailer
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify              control use of pre-merge-commit and commit-msg hooks
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --shallow-since <time>
+                          deepen history of shallow repository based on time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --deepen <n>          deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
+    --show-forced-updates
+                          check for forced-updates on all updated branches
+    --set-upstream        set upstream for git pull/fetch
+
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git pull commit "Adding of the fifth commit"
+fatal: invalid refspec 'Adding of the fifth commit'
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git pull "Adding of the fifth commit"
+fatal: 'Adding of the fifth commit' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ git log --pretty=oneline
+8dd46e7a60865d2317e05df357d2920bc100052d (HEAD -> main) Initial commit
+
+Kakashi@LAPTOP-9USM24GG MINGW64 ~/gittt/secondrepo (main)
+$ notepad thirdfile.txt
+
